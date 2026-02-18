@@ -28,7 +28,7 @@ export function BadgeMarquee({
           <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-brand-dark to-transparent z-10" />
 
           <div className="group">
-            <div className="flex items-center gap-4 py-2 will-change-transform motion-safe:animate-[marqueeBadges_16s_linear_infinite] sm:motion-safe:animate-[marqueeBadges_30s_linear_infinite] group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+            <div className="flex items-center gap-4 py-2 will-change-transform motion-safe:animate-[marqueeBadges_8s_linear_infinite] sm:motion-safe:animate-[marqueeBadges_30s_linear_infinite] group-hover:[animation-play-state:paused] motion-reduce:animate-none">
               {loop.map((b, idx) => (
                 <div
                   key={`${b.src}-${idx}`}
