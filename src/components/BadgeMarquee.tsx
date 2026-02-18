@@ -39,7 +39,7 @@ export function BadgeMarquee({
                     alt={b.alt}
                     width={320}
                     height={120}
-                    className="h-14 w-[240px] object-contain sm:h-16 sm:w-[280px]"
+                    className={b.alt.toLowerCase().includes("chas") ? "h-16 w-[280px] object-contain sm:h-20 sm:w-[340px]" : "h-14 w-[240px] object-contain sm:h-16 sm:w-[280px]"}
                   />
                 </div>
               ))}

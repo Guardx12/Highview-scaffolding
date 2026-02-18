@@ -6,7 +6,6 @@ import { DVDLogo } from '@/components/DVDLogo';
 import { Reveal } from '@/components/Reveal';
 import { SocialLinks } from '@/components/SocialLinks';
 import { Parallax } from '@/components/Parallax';
-import { Badges } from '@/components/Badges';
 import { BadgeMarquee } from '@/components/BadgeMarquee';
 import { ContactForm } from '@/components/ContactForm';
 import { site } from '@/lib/site';
@@ -68,9 +67,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-6">
-              <Badges />
-</div>
+            
           </div>
           </Reveal>
 

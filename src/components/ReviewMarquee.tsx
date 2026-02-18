@@ -5,8 +5,8 @@ import { Stars } from './Stars';
 function GoogleBadge() {
   return (
     <div className="flex items-center gap-2 text-xs text-white/60">
-      <div className="h-5 w-5 rounded-full bg-white/10 ring-1 ring-white/15 flex items-center justify-center">
-        <span className="font-semibold text-white">G</span>
+      <div className="h-6 w-6 rounded-full bg-white/10 ring-1 ring-white/15 flex items-center justify-center">
+        <span className="font-semibold text-white"><img src="/google-logo.svg" alt="Google" className="h-4 w-4" /></span>
       </div>
       <span className="font-medium text-white/70">Google</span>
     </div>
