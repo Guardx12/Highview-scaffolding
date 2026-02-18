@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from 'react';
  * - Keeps it tasteful (slow speed + small size)
  */
 export function DVDLogo({
-  size = 88,
+  size = 320,
   className = '',
 }: {
   size?: number;
@@ -33,8 +33,8 @@ export function DVDLogo({
     let x = 12;
     let y = 12;
     // Slow, premium movement (less distracting)
-    let vx = 0.28;
-    let vy = 0.22;
+    let vx = 0.18;
+    let vy = 0.14;
 
     const tick = () => {
       if (!ref.current || !parent) return;
@@ -43,8 +43,8 @@ export function DVDLogo({
         const pw = parent.clientWidth;
         const ph = parent.clientHeight;
 
-        x += vx * 6;
-        y += vy * 6;
+        x += vx * 5;
+        y += vy * 5;
 
         const maxX = Math.max(0, pw - size);
         const maxY = Math.max(0, ph - size);
@@ -93,7 +93,7 @@ export function DVDLogo({
           alt=""
           width={size}
           height={size}
-          className="object-contain"
+          className="object-cover rounded-full"
           priority={false}
         />
       </div>

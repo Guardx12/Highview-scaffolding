@@ -24,7 +24,7 @@ export function Header() {
             width={160}
             height={48}
             priority
-            className="h-10 w-auto"
+            className="h-12 w-12 rounded-full object-cover ring-2 ring-brand-green/50 shadow-lg"
           />
         </Link>
 

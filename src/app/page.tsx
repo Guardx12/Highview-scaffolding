@@ -6,6 +6,7 @@ import { DVDLogo } from '@/components/DVDLogo';
 import { Reveal } from '@/components/Reveal';
 import { SocialLinks } from '@/components/SocialLinks';
 import { Badges } from '@/components/Badges';
+import { BadgeMarquee } from '@/components/BadgeMarquee';
 import { site } from '@/lib/site';
 import { galleryImages } from '@/lib/gallery';
 
@@ -26,7 +27,7 @@ export default function HomePage() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-brand-green" />
-              CHAS Advanced • DBS checked • Fully insured
+              CHAS Advanced • CISRS • CITB
             </div>
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
               Professional scaffolding across <span className="text-brand-green">Sussex</span>
@@ -66,8 +67,7 @@ export default function HomePage() {
 
             <div className="mt-6">
               <Badges />
-              <p className="mt-2 text-xs text-white/60">(Badges can be swapped for official artwork when supplied.)</p>
-            </div>
+</div>
           </div>
           </Reveal>
 
@@ -76,7 +76,7 @@ export default function HomePage() {
             <div className="absolute -inset-6 -z-10 rounded-[32px] bg-gradient-to-b from-brand-green/15 to-transparent" />
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-sm backdrop-blur">
               <Image
-                src="/images/highview-hero.jpg"
+                src="/images/highview-hero.webp"
                 alt="Commercial scaffolding project"
                 width={1200}
                 height={900}
@@ -95,6 +95,12 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <BadgeMarquee badges={[
+        { src: '/badges/chas-advanced.webp', alt: 'CHAS Advanced Accreditation' },
+        { src: '/badges/cisrs.webp', alt: 'CISRS' },
+        { src: '/badges/citb.webp', alt: 'CITB' },
+      ]} />
 
       <ImageMarquee images={galleryImages.slice(0, 8)} title="Recent scaffolding work" />
 

@@ -31,7 +31,7 @@ export function SocialLinks({ className = '' }: { className?: string }) {
         href={site.facebook}
         target="_blank"
         rel="noreferrer"
-        className="hover-lift inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-[#1877F2] shadow-sm"
+        className="hover-lift inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 text-[#1877F2] shadow-sm"
         aria-label="Facebook"
         title="Facebook"
       >
@@ -41,11 +41,11 @@ export function SocialLinks({ className = '' }: { className?: string }) {
         href={site.instagram}
         target="_blank"
         rel="noreferrer"
-        className="hover-lift inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 shadow-sm"
+        className="hover-lift inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 shadow-sm"
         aria-label="Instagram"
         title="Instagram"
       >
-        <span className="inline-flex h-5 w-5 items-center justify-center rounded-md bg-[radial-gradient(circle_at_30%_110%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] text-white">
+        <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[radial-gradient(circle_at_30%_110%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] text-white">
           <InstagramIcon className="h-4 w-4" />
         </span>
       </a>
@@ -53,7 +53,7 @@ export function SocialLinks({ className = '' }: { className?: string }) {
         href={site.googleReviewUrl}
         target="_blank"
         rel="noreferrer"
-        className="hover-lift hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-white/85 shadow-sm"
+        className="hover-lift hidden sm:inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-white/85 shadow-sm"
         title="Leave a Google review"
       >
         <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10">G</span>
