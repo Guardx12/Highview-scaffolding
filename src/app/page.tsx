@@ -4,6 +4,8 @@ import { ReviewMarquee } from '@/components/ReviewMarquee';
 import { ImageMarquee } from '@/components/ImageMarquee';
 import { DVDLogo } from '@/components/DVDLogo';
 import { Reveal } from '@/components/Reveal';
+import { SocialLinks } from '@/components/SocialLinks';
+import { Badges } from '@/components/Badges';
 import { site } from '@/lib/site';
 import { galleryImages } from '@/lib/gallery';
 
@@ -27,7 +29,7 @@ export default function HomePage() {
               CHAS Advanced • DBS checked • Fully insured
             </div>
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-              Professional scaffolding across <span className="text-brand-green">Sussex</span>, Kent & Hampshire
+              Professional scaffolding across <span className="text-brand-green">Sussex</span>
             </h1>
             <p className="mt-5 text-base leading-relaxed text-white/75">
               Domestic and commercial scaffolding built the right way — safe, tidy, reliable. Fast quotes, clear communication and a team that respects your
@@ -43,19 +45,28 @@ export default function HomePage() {
               </Button>
             </div>
 
+            <div className="mt-4">
+              <SocialLinks />
+            </div>
+
             <div className="mt-8 grid grid-cols-3 gap-3 text-sm">
-              <div className="card-solid p-4">
+              <div className="card-solid hover-lift p-4">
                 <div className="text-2xl font-bold text-white">Fast</div>
                 <div className="mt-1 text-white/70">Quotes & scheduling</div>
               </div>
-              <div className="card-solid p-4">
+              <div className="card-solid hover-lift p-4">
                 <div className="text-2xl font-bold text-white">Safe</div>
                 <div className="mt-1 text-white/70">Compliance-first</div>
               </div>
-              <div className="card-solid p-4">
+              <div className="card-solid hover-lift p-4">
                 <div className="text-2xl font-bold text-white">Tidy</div>
                 <div className="mt-1 text-white/70">Respectful on site</div>
               </div>
+            </div>
+
+            <div className="mt-6">
+              <Badges />
+              <p className="mt-2 text-xs text-white/60">(Badges can be swapped for official artwork when supplied.)</p>
             </div>
           </div>
           </Reveal>
@@ -65,8 +76,8 @@ export default function HomePage() {
             <div className="absolute -inset-6 -z-10 rounded-[32px] bg-gradient-to-b from-brand-green/15 to-transparent" />
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-sm backdrop-blur">
               <Image
-                src={galleryImages[1].src}
-                alt={galleryImages[1].alt}
+                src="/images/highview-hero.jpg"
+                alt="Commercial scaffolding project"
                 width={1200}
                 height={900}
                 className="h-[420px] w-full object-cover"
@@ -75,7 +86,7 @@ export default function HomePage() {
             </div>
             <div className="mt-4 grid grid-cols-3 gap-3">
               {galleryImages.slice(2, 5).map((img) => (
-                <div key={img.src} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm backdrop-blur">
+                <div key={img.src} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm backdrop-blur hover-lift">
                   <Image src={img.src} alt={img.alt} width={600} height={450} className="h-28 w-full object-cover" />
                 </div>
               ))}
@@ -119,7 +130,7 @@ export default function HomePage() {
                   desc: 'Quick access solutions when you need a smaller setup with a professional finish.',
                 },
               ].map((c) => (
-                <div key={c.title} className="card">
+                <div key={c.title} className="card hover-lift">
                   <div className="text-base font-semibold text-white">{c.title}</div>
                   <p className="mt-2 text-sm leading-relaxed text-white/75">{c.desc}</p>
                 </div>

@@ -36,8 +36,17 @@ export function ImageMarquee({
           <div className="group">
             <div className="flex gap-4 py-2 will-change-transform motion-safe:animate-[marqueeImages_38s_linear_infinite] group-hover:[animation-play-state:paused] motion-reduce:animate-none">
               {loop.map((img, idx) => (
-                <div key={`${img.src}-${idx}`} className="shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm backdrop-blur">
-                  <Image src={img.src} alt={img.alt} width={800} height={600} className="h-44 w-[280px] object-cover sm:h-48 sm:w-[320px]" />
+                <div
+                  key={`${img.src}-${idx}`}
+                  className="shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm backdrop-blur hover-lift"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={800}
+                    height={600}
+                    className="h-44 w-[280px] object-cover transition duration-300 group-hover:opacity-95 hover:scale-[1.04] sm:h-48 sm:w-[320px]"
+                  />
                 </div>
               ))}
             </div>

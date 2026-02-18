@@ -1,34 +1,25 @@
 import { Button } from '@/components/Button';
 import { site } from '@/lib/site';
+import { areas } from '@/lib/areasData';
 
 export default function AreasPage() {
   return (
     <section className="py-12">
       <div className="mx-auto max-w-6xl px-4">
-        <h1 className="text-4xl font-extrabold tracking-tight text-white">Areas we cover</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight text-white shine-title">Areas we cover</h1>
         <p className="mt-4 max-w-2xl text-white/75">
-          Based near {site.town}, we provide scaffolding across {site.areas.join(', ')} and surrounding areas. If you’re unsure, just get in touch.
+          Based near {site.town}, we cover key towns across Sussex. If you’re unsure, send your postcode and we’ll confirm quickly.
         </p>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {[
-            {
-              title: 'Sussex',
-              desc: 'Domestic and commercial scaffolding across West & East Sussex, including coastal and inland areas.',
-            },
-            {
-              title: 'Kent',
-              desc: 'Support for contractors and homeowners across Kent with tidy setups and clear communication.',
-            },
-            {
-              title: 'Hampshire',
-              desc: 'Reliable scaffolding for projects across Hampshire with a safety-first approach.',
-            },
-          ].map((a) => (
-            <div key={a.title} className="card p-6">
-              <div className="text-lg font-semibold text-white">{a.title}</div>
-              <p className="mt-2 text-sm text-white/75">{a.desc}</p>
-            </div>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {areas.map((a) => (
+            <a key={a.slug} href={`/areas/${a.slug}`} className="card hover-lift p-6 group">
+              <div className="text-lg font-semibold text-white group-hover:text-brand-green transition">{a.name}</div>
+              <p className="mt-2 text-sm text-white/75">{a.intro}</p>
+              <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white/80 group-hover:text-white transition">
+                View area page <span className="transition group-hover:translate-x-0.5">→</span>
+              </div>
+            </a>
           ))}
         </div>
 

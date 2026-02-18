@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="96" viewBox="0 0 320 96">
+  <rect x="4" y="4" width="312" height="88" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)"/>
+  <circle cx="48" cy="48" r="22" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.25)"/>
+  <path d="M48 28l14 6v12c0 12-9 22-14 24-5-2-14-12-14-24V34l14-6z" fill="rgba(43,191,106,0.16)" stroke="#2bbf6a" stroke-width="2"/>
+  <path d="M42 48l4 4 10-12" fill="none" stroke="#2bbf6a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="84" y="42" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="20" font-weight="800" fill="white">Fully insured</text>
+  <text x="84" y="64" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="13" font-weight="600" fill="rgba(255,255,255,0.8)">Peace of mind</text>
+</svg>

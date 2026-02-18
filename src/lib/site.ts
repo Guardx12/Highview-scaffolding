@@ -11,6 +11,6 @@ export const site = {
   facebook: 'https://www.facebook.com/highviewscaffolding',
   instagram: 'https://www.instagram.com/highviewscaffolding/',
   googleReviewUrl: 'https://search.google.com/local/writereview?placeid=ChIJvXESGHOXdUgRrU3ZjOMpx_0',
-  areas: ['Sussex', 'Kent', 'Hampshire'],
+  areas: ['Sussex'],
   town: 'Storrington',
 };

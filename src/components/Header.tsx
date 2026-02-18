@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/lib/site';
 import { Button } from './Button';
+import { SocialLinks } from './SocialLinks';
 
 const nav = [
   { href: '/', label: 'Home' },
@@ -40,6 +41,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <div className="hidden md:block">
+            <SocialLinks />
+          </div>
           <Button href={`tel:${site.phoneE164}`} variant="secondary" className="hidden sm:inline-flex">
             Call {site.phoneDisplay}
           </Button>

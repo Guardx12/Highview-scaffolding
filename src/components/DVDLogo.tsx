@@ -32,9 +32,9 @@ export function DVDLogo({
 
     let x = 12;
     let y = 12;
-    // Slightly more movement than before (still premium)
-    let vx = 0.42;
-    let vy = 0.34;
+    // Slow, premium movement (less distracting)
+    let vx = 0.28;
+    let vy = 0.22;
 
     const tick = () => {
       if (!ref.current || !parent) return;
@@ -43,8 +43,8 @@ export function DVDLogo({
         const pw = parent.clientWidth;
         const ph = parent.clientHeight;
 
-        x += vx * 10;
-        y += vy * 10;
+        x += vx * 6;
+        y += vy * 6;
 
         const maxX = Math.max(0, pw - size);
         const maxY = Math.max(0, ph - size);

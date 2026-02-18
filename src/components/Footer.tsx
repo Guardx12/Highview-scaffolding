@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { site } from '@/lib/site';
+import { SocialLinks } from './SocialLinks';
 
 export function Footer() {
   return (
@@ -26,7 +27,7 @@ export function Footer() {
               </div>
               <div className="mt-1">
                 <span className="font-semibold">Email:</span>{' '}
-                <a className="hover:underline" href={`mailto:${site.email}`}>
+                <a className="hover:underline break-all" href={`mailto:${site.email}`}>
                   {site.email}
                 </a>
               </div>
@@ -51,9 +52,9 @@ export function Footer() {
               <li>DBS checked</li>
               <li>Fully insured</li>
               <li>Domestic & commercial</li>
-              <li className="pt-2 text-xs text-white/60">Follow</li>
-              <li><a className="hover:underline" href={site.facebook} target="_blank" rel="noreferrer">Facebook</a></li>
-              <li><a className="hover:underline" href={site.instagram} target="_blank" rel="noreferrer">Instagram</a></li>
+              <li className="pt-3">
+                <SocialLinks />
+              </li>
             </ul>
           </div>
         </div>
