@@ -33,8 +33,8 @@ export function DVDLogo({
     let x = 12;
     let y = 12;
     // Slow, premium movement (less distracting)
-    let vx = 0.18;
-    let vy = 0.14;
+    let vx = 0.12;
+    let vy = 0.09;
 
     const tick = () => {
       if (!ref.current || !parent) return;
@@ -43,8 +43,8 @@ export function DVDLogo({
         const pw = parent.clientWidth;
         const ph = parent.clientHeight;
 
-        x += vx * 5;
-        y += vy * 5;
+        x += vx * 4;
+        y += vy * 4;
 
         const maxX = Math.max(0, pw - size);
         const maxY = Math.max(0, ph - size);
@@ -87,13 +87,15 @@ export function DVDLogo({
       aria-hidden="true"
       title="Highview Scaffolding"
     >
-      <div className="rounded-full bg-white/10 p-2 shadow-sm ring-1 ring-white/15 backdrop-blur">
+      <div className="relative rounded-full bg-white/10 p-2 shadow-sm ring-1 ring-white/15 backdrop-blur">
+        <div className="pointer-events-none absolute inset-0 -z-10 rounded-full blur-2xl opacity-70" style={{background:"radial-gradient(circle at 30% 30%, rgba(67,160,71,0.35), transparent 60%)"}} />
+        <div className="pointer-events-none absolute inset-0 -z-10 rounded-full blur-xl opacity-60" style={{background:"radial-gradient(circle at 70% 70%, rgba(255,255,255,0.18), transparent 55%)"}} />
         <Image
           src="/images/highview-logo.webp"
           alt=""
           width={size}
           height={size}
-          className="object-cover rounded-full"
+          className="object-cover rounded-full drop-shadow-[0_18px_30px_rgba(0,0,0,0.35)]"
           priority={false}
         />
       </div>

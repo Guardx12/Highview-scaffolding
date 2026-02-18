@@ -5,15 +5,17 @@ import { ImageMarquee } from '@/components/ImageMarquee';
 import { DVDLogo } from '@/components/DVDLogo';
 import { Reveal } from '@/components/Reveal';
 import { SocialLinks } from '@/components/SocialLinks';
+import { Parallax } from '@/components/Parallax';
 import { Badges } from '@/components/Badges';
 import { BadgeMarquee } from '@/components/BadgeMarquee';
+import { ContactForm } from '@/components/ContactForm';
 import { site } from '@/lib/site';
 import { galleryImages } from '@/lib/gallery';
 
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden">
+      <Parallax className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
           <div className="relative mx-auto max-w-6xl px-4 py-0">
             <div className="relative h-[520px] md:h-[560px]">
@@ -21,6 +23,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <div className="absolute inset-0 -z-20 parallax-overlay" />
         <div className="absolute inset-0 -z-10 bg-grid opacity-25" />
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 md:items-center">
           <Reveal>
@@ -94,7 +97,7 @@ export default function HomePage() {
           </div>
           </Reveal>
         </div>
-      </section>
+      </Parallax>
 
       <BadgeMarquee badges={[
         { src: '/badges/chas-advanced.webp', alt: 'CHAS Advanced Accreditation' },
@@ -152,8 +155,6 @@ export default function HomePage() {
       </section>
       </Reveal>
 
-      <ReviewMarquee title="Clear communication. Reliable service." />
-
       <Reveal>
       <section className="py-12" id="contact">
         <div className="mx-auto max-w-6xl px-4">
@@ -188,40 +189,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <form
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur"
-                action={`mailto:${site.email}`}
-                method="post"
-                encType="text/plain"
-              >
-                <div className="grid gap-3">
-                  <label className="grid gap-1 text-sm">
-                    <span className="font-semibold text-white/80">Name</span>
-                    <input name="name" required className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white placeholder:text-white/40" />
-                  </label>
-                  <label className="grid gap-1 text-sm">
-                    <span className="font-semibold text-white/80">Phone</span>
-                    <input name="phone" required className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white placeholder:text-white/40" />
-                  </label>
-                  <label className="grid gap-1 text-sm">
-                    <span className="font-semibold text-white/80">Postcode / area</span>
-                    <input name="area" className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white placeholder:text-white/40" />
-                  </label>
-                  <label className="grid gap-1 text-sm">
-                    <span className="font-semibold text-white/80">What do you need?</span>
-                    <textarea name="message" rows={4} className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white placeholder:text-white/40" />
-                  </label>
-                  <button
-                    type="submit"
-                    className="mt-2 inline-flex items-center justify-center rounded-xl bg-brand-green px-4 py-3 text-sm font-semibold text-white hover:brightness-110"
-                  >
-                    Send enquiry
-                  </button>
-                  <p className="text-xs text-white/60">
-                    This form opens your email client to send your message. If you’d prefer, call us instead.
-                  </p>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>

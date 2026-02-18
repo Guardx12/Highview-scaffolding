@@ -1,5 +1,6 @@
 import { site } from '@/lib/site';
 import { SocialLinks } from '@/components/SocialLinks';
+import { ContactForm } from '@/components/ContactForm';
 
 export default function ContactPage() {
   return (
@@ -37,37 +38,7 @@ export default function ContactPage() {
           <SocialLinks />
         </div>
 
-        <form
-          className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
-          action={`mailto:${site.email}`}
-          method="post"
-          encType="text/plain"
-        >
-          <div className="grid gap-3">
-            <label className="grid gap-1 text-sm">
-              <span className="font-semibold text-white/80">Name</span>
-              <input name="name" required className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white" />
-            </label>
-            <label className="grid gap-1 text-sm">
-              <span className="font-semibold text-white/80">Phone</span>
-              <input name="phone" required className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white" />
-            </label>
-            <label className="grid gap-1 text-sm">
-              <span className="font-semibold text-white/80">Postcode / area</span>
-              <input name="area" className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white" />
-            </label>
-            <label className="grid gap-1 text-sm">
-              <span className="font-semibold text-white/80">Project details</span>
-              <textarea name="message" rows={5} className="rounded-xl border border-white/10 bg-brand-dark/60 px-3 py-2 text-white" />
-            </label>
-            <button type="submit" className="mt-2 rounded-xl bg-brand-green px-4 py-3 text-sm font-semibold text-white hover:brightness-110">
-              Send enquiry
-            </button>
-            <p className="text-xs text-white/60">
-              This opens your email client to send your message. If you’d prefer, call us.
-            </p>
-          </div>
-        </form>
+        <ContactForm />
       </div>
     </section>
   );

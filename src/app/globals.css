@@ -95,3 +95,81 @@ html {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+
+/* Glass navbar extra polish */
+.nav-glass {
+  background: linear-gradient(180deg, rgba(10,14,20,0.78), rgba(10,14,20,0.55));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Premium button shine */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after{
+  content:"";
+  position:absolute;
+  top:-60%;
+  left:-40%;
+  width:60%;
+  height:220%;
+  transform: rotate(25deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+  opacity:0;
+  transition: opacity 200ms ease;
+}
+.btn-shine:hover::after{
+  opacity:1;
+  animation: shineSweep 1.1s ease;
+}
+@keyframes shineSweep{
+  0% { transform: translateX(-40%) rotate(25deg); }
+  100% { transform: translateX(240%) rotate(25deg); }
+}
+
+/* Subtle heading shimmer */
+.shine-title{
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.45), rgba(255,255,255,0.85));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: titleShine 4.5s ease-in-out infinite;
+}
+@keyframes titleShine{
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Link underline animation */
+.link-underline{
+  position: relative;
+}
+.link-underline::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  height:2px;
+  width:100%;
+  transform: scaleX(0);
+  transform-origin:left;
+  background: rgba(67,160,71,0.9);
+  transition: transform 220ms ease;
+}
+.link-underline:hover::after{
+  transform: scaleX(1);
+}
+
+/* Hero parallax overlay */
+.parallax-overlay{
+  position:absolute;
+  inset:0;
+  background: radial-gradient(1200px 600px at 30% 10%, rgba(67,160,71,0.20), transparent 60%),
+              radial-gradient(900px 500px at 70% 20%, rgba(255,255,255,0.08), transparent 60%);
+  transform: translate3d(0,var(--parY,0px),0);
+  will-change: transform;
+}
