@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
+import WhatsAppBubble from "../components/WhatsAppBubble";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -29,7 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <CallBar />
-      </body>
+        <WhatsAppBubble />
+</body>
     </html>
   );
 }
