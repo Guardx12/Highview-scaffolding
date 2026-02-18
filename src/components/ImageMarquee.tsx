@@ -23,7 +23,7 @@ export function ImageMarquee({
           </div>
           <a
             href="/gallery"
-            className="hidden sm:inline-flex btn-ghost"
+            className="inline-flex btn-ghost"
           >
             View gallery
           </a>
@@ -34,7 +34,7 @@ export function ImageMarquee({
           <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-brand-dark to-transparent z-10" />
 
           <div className="group">
-            <div className="flex gap-4 py-2 will-change-transform motion-safe:animate-[marqueeImages_22s_linear_infinite] sm:motion-safe:animate-[marqueeImages_38s_linear_infinite] group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+            <div className="flex gap-4 py-2 will-change-transform motion-safe:animate-[marqueeImages_10s_linear_infinite] sm:motion-safe:animate-[marqueeImages_38s_linear_infinite] group-hover:[animation-play-state:paused] motion-reduce:animate-none">
               {loop.map((img, idx) => (
                 <div
                   key={`${img.src}-${idx}`}
