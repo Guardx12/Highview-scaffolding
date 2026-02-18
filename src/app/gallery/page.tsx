@@ -6,8 +6,8 @@ export default function GalleryPage() {
   return (
     <section className="py-12">
       <div className="mx-auto max-w-6xl px-4">
-        <h1 className="text-4xl font-extrabold tracking-tight">Recent work</h1>
-        <p className="mt-4 max-w-2xl text-gray-700">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white">Recent work</h1>
+        <p className="mt-4 max-w-2xl text-white/75">
           A snapshot of projects completed across domestic and commercial sites.
         </p>
 
@@ -16,7 +16,7 @@ export default function GalleryPage() {
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((img) => (
-            <div key={img.src} className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <div key={img.src} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm backdrop-blur">
               <Image src={img.src} alt={img.alt} width={1200} height={900} className="h-56 w-full object-cover" />
             </div>
           ))}

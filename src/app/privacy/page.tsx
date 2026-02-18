@@ -1,7 +1,7 @@
 export default function PrivacyPage() {
   return (
     <section className="py-12">
-      <div className="mx-auto max-w-3xl px-4 prose prose-sm">
+      <div className="mx-auto max-w-3xl px-4 prose prose-sm prose-invert">
         <h1>Privacy Policy</h1>
         <p>
           This is a simple placeholder privacy policy page. Replace with your company’s final policy before going live.

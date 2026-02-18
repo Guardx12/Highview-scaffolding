@@ -3,11 +3,47 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html, body {
   height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Carbon-fibre style background (subtle, premium) */
+.bg-carbon {
+  background-color: #0b0f14;
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 40%, rgba(0,0,0,0.0) 60%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0 8px, rgba(255,255,255,0.02) 8px 16px),
+    repeating-linear-gradient(-45deg, rgba(0,0,0,0.35) 0 10px, rgba(0,0,0,0.15) 10px 20px);
+  background-size: auto, 220px 220px, 260px 260px;
+  background-attachment: fixed;
+}
+
+/* Reveal-on-scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Smooth marquee animation */
@@ -19,7 +55,22 @@ html, body {
 /* Subtle grid background utility */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 28px 28px;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/10 bg-white/5 p-5 shadow-sm backdrop-blur;
+  }
+  .card-solid {
+    @apply rounded-2xl border border-white/10 bg-brand-dark/70 p-5 shadow-sm;
+  }
+  .muted {
+    @apply text-white/70;
+  }
+  .btn-ghost {
+    @apply rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition;
+  }
 }

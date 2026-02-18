@@ -5,8 +5,8 @@ export default function AreasPage() {
   return (
     <section className="py-12">
       <div className="mx-auto max-w-6xl px-4">
-        <h1 className="text-4xl font-extrabold tracking-tight">Areas we cover</h1>
-        <p className="mt-4 max-w-2xl text-gray-700">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white">Areas we cover</h1>
+        <p className="mt-4 max-w-2xl text-white/75">
           Based near {site.town}, we provide scaffolding across {site.areas.join(', ')} and surrounding areas. If you’re unsure, just get in touch.
         </p>
 
@@ -25,16 +25,16 @@ export default function AreasPage() {
               desc: 'Reliable scaffolding for projects across Hampshire with a safety-first approach.',
             },
           ].map((a) => (
-            <div key={a.title} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <div className="text-lg font-semibold">{a.title}</div>
-              <p className="mt-2 text-sm text-gray-700">{a.desc}</p>
+            <div key={a.title} className="card p-6">
+              <div className="text-lg font-semibold text-white">{a.title}</div>
+              <p className="mt-2 text-sm text-white/75">{a.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-6">
-          <div className="text-base font-semibold">Not sure if you’re in range?</div>
-          <p className="mt-2 text-sm text-gray-700">Send your postcode and a couple of details — we’ll confirm quickly.</p>
+        <div className="mt-10 rounded-2xl border border-white/10 bg-brand-dark/60 p-6 backdrop-blur">
+          <div className="text-base font-semibold text-white">Not sure if you’re in range?</div>
+          <p className="mt-2 text-sm text-white/75">Send your postcode and a couple of details — we’ll confirm quickly.</p>
           <div className="mt-4">
             <Button href="/contact">Get a Quote</Button>
           </div>

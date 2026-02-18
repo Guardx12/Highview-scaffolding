@@ -14,7 +14,7 @@ const nav = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-dark/70 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -32,7 +32,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-gray-700 hover:text-gray-900"
+              className="text-sm font-medium text-white/80 hover:text-white"
             >
               {item.label}
             </Link>
@@ -42,6 +42,9 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Button href={`tel:${site.phoneE164}`} variant="secondary" className="hidden sm:inline-flex">
             Call {site.phoneDisplay}
+          </Button>
+          <Button href={`tel:${site.secondaryPhoneE164}`} variant="secondary" className="hidden lg:inline-flex">
+            Office {site.secondaryPhoneDisplay}
           </Button>
           <Button href="/contact">Get a Quote</Button>
         </div>

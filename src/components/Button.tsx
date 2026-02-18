@@ -14,7 +14,7 @@ export function Button({ href, children, variant = 'primary', className = '' }: 
   const styles =
     variant === 'primary'
       ? 'bg-brand-green text-white hover:brightness-110'
-      : 'bg-white text-gray-900 border border-gray-200 hover:bg-gray-50';
+      : 'border border-white/15 bg-white/5 text-white hover:bg-white/10';
 
   return (
     <Link href={href} className={`${base} ${styles} ${className}`}>

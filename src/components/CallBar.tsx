@@ -3,7 +3,7 @@ import { site } from '@/lib/site';
 
 export function CallBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gray-200 bg-white/95 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-brand-dark/80 backdrop-blur md:hidden">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
         <a
           href={`tel:${site.phoneE164}`}
@@ -13,7 +13,7 @@ export function CallBar() {
         </a>
         <a
           href="/contact"
-          className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-gray-900"
+          className="flex-1 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center text-sm font-semibold text-white"
         >
           Get a quote
         </a>

@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from 'react';
  * - Keeps it tasteful (slow speed + small size)
  */
 export function DVDLogo({
-  size = 64,
+  size = 88,
   className = '',
 }: {
   size?: number;
@@ -32,8 +32,9 @@ export function DVDLogo({
 
     let x = 12;
     let y = 12;
-    let vx = 0.35; // slow = premium
-    let vy = 0.28;
+    // Slightly more movement than before (still premium)
+    let vx = 0.42;
+    let vy = 0.34;
 
     const tick = () => {
       if (!ref.current || !parent) return;
@@ -86,13 +87,13 @@ export function DVDLogo({
       aria-hidden="true"
       title="Highview Scaffolding"
     >
-      <div className="rounded-full bg-white/80 p-1 shadow-sm ring-1 ring-gray-200 backdrop-blur">
+      <div className="rounded-full bg-white/10 p-2 shadow-sm ring-1 ring-white/15 backdrop-blur">
         <Image
           src="/images/highview-logo.webp"
           alt=""
           width={size}
           height={size}
-          className="h-12 w-12 object-contain"
+          className="object-contain"
           priority={false}
         />
       </div>
