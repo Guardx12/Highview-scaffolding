@@ -12,13 +12,15 @@ export default function GalleryPage() {
         </p>
 
         <div className="mt-8">
-        <ImageMarquee images={galleryImages.slice(0, 10)} title="Projects in action" />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ImageMarquee images={galleryImages.slice(0, 10)} title="Projects in action" />
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((img) => (
             <div key={img.src} className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
               <Image src={img.src} alt={img.alt} width={1200} height={900} className="h-56 w-full object-cover" />
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>
