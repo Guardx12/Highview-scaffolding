@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { Button } from '@/components/Button';
 import { ReviewMarquee } from '@/components/ReviewMarquee';
 import { ImageMarquee } from '@/components/ImageMarquee';
-import { DVDLogo } from '@/components/DVDLogo';
 import { Reveal } from '@/components/Reveal';
 import { SocialLinks } from '@/components/SocialLinks';
 import { Parallax } from '@/components/Parallax';
@@ -18,8 +17,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-0">
           <div className="relative mx-auto max-w-6xl px-4 py-0">
             <div className="relative h-[520px] md:h-[560px]">
-              <DVDLogo className="pointer-events-auto" />
-            </div>
+                          </div>
           </div>
         </div>
         <div className="absolute inset-0 -z-20 parallax-overlay" />
